@@ -12,7 +12,35 @@
   </div>
   <script>
     let root = document.getElementById('root');
-    console.log(root);
+    // console.log(root);
+    // 원초적으로 정적html 요소 스타일링
+    // root.style.backgroundColor = "red";
+    // root.style.width = "100px";
+    // root.style.height = "100px";
+    // 배열을 활용해 보기 시작
+    let rootStyling = ["red","100px","100px"];
+    // 이걸 또 일일히 넣어
+    // root.style.backgroundColor=rootStyling[0];
+    // root.style.width=rootStyling[1];
+    // root.style.height=rootStyling[2];
+    // 너도 배열 딱 대
+    let rootStyleSelect = ["backgroundColor","width","height"];
+    // root.style[rootStyleSelect[0]] = rootStyling[0];
+    // 오 쒸 적용된다 그러면 for문 갈겨버려
+    for(let i=0; i<rootStyling.length; i++) {
+      root.style[rootStyleSelect[i]] = rootStyling[i];
+    }
+    // 배열과 for문만을 이용해 스타일링이 적용 됐다... 함수로 만들어 보자
+    // function styling(stylingName,elementName,styleSelect) {
+    //   for(let i=0; i<stylingName.length; i++) {
+    //     elementName.style[stylingName[i]] = styleSelect[i];
+    // }
+    // }
+    // 퇴사 하겠습니다.
+   
+
+    
+    
   </script>
 </body>
 </html>
